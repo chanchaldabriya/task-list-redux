@@ -1,0 +1,11 @@
+.Filter {
+    display: flex;
+}
+
+.Filter-input {
+    flex: 3;
+}
+
+.Filter-btn {
+    flex: 1;
+}

@@ -4,8 +4,16 @@ import {
     deleteTask
 } from '../actions';
 
+const getVisibleTasks = (tasks, filter) => {
+    const regExp = new RegExp(filter, "i");
+    if(filter) {
+        return tasks.filter(task => regExp.test(task.name));
+    }
+    return tasks;
+}
+
 const mapStateToProps = state => ({
-    tasks: state.tasks
+    tasks: getVisibleTasks(state.tasks, state.filter)
 })
   
 const mapDispatchToProps = dispatch => ({

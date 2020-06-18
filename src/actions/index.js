@@ -15,6 +15,9 @@ export function addTask(task) {
 export function deleteTask(id) {
   return { type: DELETE_TASK, id };
 }
+export function updateFilter(filter) {
+  return { type: UPDATE_FILTER, filter };
+}
 
 // others
 export const SortFields = {
