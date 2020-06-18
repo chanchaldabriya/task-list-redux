@@ -1,0 +1,14 @@
+.AddTask {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.AddTask > * {
+    margin: 10px 0;
+}
+
+.AddTask-date {
+    display: flex;
+    justify-content: space-between;
+}

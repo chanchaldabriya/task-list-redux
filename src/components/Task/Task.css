@@ -1,0 +1,62 @@
+.Task {
+    margin: 10px 5px;
+    padding: 10px;
+    list-style-type: none;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.Task-name {
+    color: #0084cc;
+}
+
+.Task-date,
+.Task-status-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.Task-status {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.Task-scheduled {
+    background-color: #7e57b4;
+}
+.Task-running {
+    background-color: #46ba46;
+}
+.Task-expired {
+    background-color: #a13434;
+}
+
+.Task-date > div {
+    background-color: #0084cc;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.Task-start,
+.Task-end {
+    font-weight: bold;
+}
+
+.Task-delete {
+    border-radius: 5px;
+    border: 1px solid #a13434;
+    color: #a13434;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.Task-delete:hover {
+    color: white;
+    background-color: #a13434;
+}
