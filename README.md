@@ -1,3 +1,7 @@
+## task-list-redux
+
+A simple task management app built using combo of React(for Presentation) & Redux(for managed state) under the hood with features to add a task, delete it, sort & filter the tasks etc.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
