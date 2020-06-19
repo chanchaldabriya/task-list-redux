@@ -1,18 +1,24 @@
 .App {
-  /* text-align: center; */
-  padding: 1% 10%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.Section {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
+.App-logout {
+    align-self: flex-end;
+    color: #999;
+    background-color: transparent;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin: 10px;
 }
 
-.Section-title {
-  background-color: #0084cc;
-  color: white;
-  margin: 0;
-  padding: 5px;
-  font-size: 1.2rem;
+.App-logout:hover {
+    cursor: pointer;
+    background-color: #999;
+    color: white;
 }

@@ -1,37 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import VisibleTaskList from "./containers/VisibleTaskList";
-import AddTask from "./containers/AddTask/AddTask";
-import Filter from "./containers/Filter/Filter";
-import Sort from "./containers/Sort/Sort";
-
-const Section = ({ title, children }) => {
-  return (
-    <section className="Section">
-      {title && <h2 className="Section-title">{title}</h2>}
-      {children}
-    </section>
-  );
-};
+import { Route, Switch, useHistory, Redirect } from "react-router-dom";
+import Tasks from "./components/Tasks/Tasks";
+import Login from "./components/Login/Login";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  let history = useHistory();
+
   return (
     <div className="App">
-      <Section title="Add Task">
-        <AddTask />
-      </Section>
-
-      <Section title="Filter Tasks">
-        <Filter />
-      </Section>
-
-      <Section title="Sort Tasks">
-        <Sort />
-      </Section>
-
-      <Section>
-        <VisibleTaskList />
-      </Section>
+      {loggedIn && (
+        <button
+          className="App-logout"
+          onClick={() => {
+            setLoggedIn(false);
+            history.push("/login");
+          }}
+        >
+          Logout
+        </button>
+      )}
+      <Switch>
+        <Route
+          exact
+          path="/login"
+          render={(routeProps) => (
+            <Login setLoggedIn={setLoggedIn} {...routeProps} />
+          )}
+        />
+        <ProtectedRoute
+          exact
+          path="/"
+          component={Tasks}
+          loggedIn={loggedIn}
+          redirectPath="/login"
+        />
+        <Redirect to="/" />
+      </Switch>
     </div>
   );
 }

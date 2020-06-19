@@ -25,7 +25,7 @@ function Task({ id, name, description, startDate, endDate, deleteTask }) {
       {name && <h2 className="Task-name">{name}</h2>}
       {description && <p className="Task-description">{description}</p>}
 
-      <div className="Task-date">
+      {/* <div className="Task-date">
         <div>
           <span>Start Date: </span>
           <span className="Task-start">
@@ -38,7 +38,7 @@ function Task({ id, name, description, startDate, endDate, deleteTask }) {
             {getDateString(getDateFromMillis(endDate))}
           </span>
         </div>
-      </div>
+      </div> */}
 
       <div className="Task-status-container">
         <span className={`Task-status Task-${taskStatus}`}>{taskStatus}</span>
