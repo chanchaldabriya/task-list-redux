@@ -1,0 +1,8 @@
+.Sort {
+    display: flex;
+    padding: 10px;
+}
+
+.Sort > * {
+    flex: 1;
+}

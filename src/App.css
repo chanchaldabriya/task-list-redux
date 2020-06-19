@@ -1,4 +1,18 @@
 .App {
   /* text-align: center; */
-  padding: 10%;
+  padding: 1% 10%;
+}
+
+.Section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.Section-title {
+  background-color: #0084cc;
+  color: white;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.2rem;
 }

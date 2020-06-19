@@ -2,10 +2,10 @@ import React from "react";
 import "./Filter.css";
 import { connect } from "react-redux";
 import { updateFilter } from "../../actions";
-import useTextInput from "../../hooks/useTextInput";
+import useFormInput from "../../hooks/useFormInput";
 
 const Filter = ({ dispatch }) => {
-  const [filter, setFilter, resetFilter] = useTextInput("");
+  const [filter, setFilter] = useFormInput("");
 
   return (
     <form

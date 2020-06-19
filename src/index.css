@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+select {
+  outline-color: #0084cc;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #0084cc;
+  outline: none;
+  padding: 5px;
+}
+
+input[type="text"]::placeholder {
+  color: #0084cc;
+}

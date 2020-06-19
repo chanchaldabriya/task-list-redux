@@ -1,5 +1,6 @@
 .Filter {
     display: flex;
+    padding: 10px;
 }
 
 .Filter-input {

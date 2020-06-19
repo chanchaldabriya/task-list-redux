@@ -2,14 +2,14 @@ import React from "react";
 import "./AddTask.css";
 import { connect } from "react-redux";
 import { addTask } from "../../actions";
-import useTextInput from "../../hooks/useTextInput";
+import useFormInput from "../../hooks/useFormInput";
 import { getMillisFromDate, getDateFromString } from "../../common/DateUtil";
 
 const AddTask = ({ dispatch }) => {
-  const [name, setName, resetName] = useTextInput("");
-  const [description, setDesc, resetDesc] = useTextInput("");
-  const [startDate, setStart, resetStart] = useTextInput("");
-  const [endDate, setEnd, resetEnd] = useTextInput("");
+  const [name, setName, resetName] = useFormInput("");
+  const [description, setDesc, resetDesc] = useFormInput("");
+  const [startDate, setStart, resetStart] = useFormInput("");
+  const [endDate, setEnd, resetEnd] = useFormInput("");
 
   // reset all fields
   const resetForm = () => {
